@@ -6,8 +6,9 @@ import { Provider } from 'react-redux';
 import { store } from './store';
 import { BrowserRouter } from 'react-router-dom';
 import initI18n from './utils/i18n';
-import '@unocss/reset/tailwind.css'; //初始化css
+import 'antd/dist/reset.css';
 import 'uno.css'; //引入unocss
+
 initI18n();
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(

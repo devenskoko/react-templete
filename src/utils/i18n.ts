@@ -8,15 +8,13 @@ export const initI18n = () => {
     .use(Backend)
     .use(initReactI18next)
     .init({
-      interpolation: {
-        escapeValue: false, // not needed for react as it escapes by default
-      },
       //默认语言
-      lng: 'zh_CN',
-      fallbackLng: 'zh_CN',
+      lng: 'zh-CN',
+      ns: ['common'],
+      supportedLngs: ['zh-CN'],
       debug: false,
       backend: {
-        loadPath: `/locales/{{lng}}.json`,
+        loadPath: `${window.location.origin}${import.meta.env.VITE_BASE}/locales/{{lng}}/{{ns}}.json`,
       },
     });
 };

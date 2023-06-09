@@ -1,5 +1,6 @@
 import { useRootDispatch, useRootSelector } from '@/store/hooks';
 import { decremented, getUserData, incremented, selectAppSlice, setCount } from '@/store/slices/appSlice';
+import { Button, Input } from 'antd';
 import { useTranslation } from 'react-i18next';
 export default function index() {
   const { t } = useTranslation();
@@ -11,10 +12,16 @@ export default function index() {
   };
   return (
     <>
-      <button onClick={() => dispatch(decremented())}>-</button>
-      <input className="border-2" type="text" onChange={(e) => inputHandle(e)} value={count} />
-      <button onClick={() => dispatch(incremented())}>+</button>
-      <button onClick={() => dispatch(getUserData())}>{t('hello')}</button>
+      <Button type="primary" onClick={() => dispatch(decremented())}>
+        -
+      </Button>
+      <Input className="border-2" type="text" onChange={(e) => inputHandle(e)} value={count} />
+      <Button type="primary" onClick={() => dispatch(incremented())}>
+        +
+      </Button>
+      <Button type="primary" onClick={() => dispatch(getUserData())}>
+        {t('hello')}
+      </Button>
     </>
   );
 }

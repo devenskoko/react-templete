@@ -1,3 +1,4 @@
+import { Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
 export default function index() {
   // 路由跳转
@@ -5,7 +6,9 @@ export default function index() {
   const toRedux = () => router('/toolkit');
   return (
     <>
-      <button onClick={toRedux}>toRedux</button>
+      <Button type="primary" onClick={toRedux}>
+        toRedux
+      </Button>
     </>
   );
 }

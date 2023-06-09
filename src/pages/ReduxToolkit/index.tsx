@@ -1,7 +1,8 @@
 import { useRootDispatch, useRootSelector } from '@/store/hooks';
 import { decremented, getUserData, incremented, selectAppSlice, setCount } from '@/store/slices/appSlice';
 import { Button, Input } from 'antd';
-import { useTranslation } from 'react-i18next';
+import IconAccountBox from '~icons/mdi/account-box';
+
 export default function index() {
   const { t } = useTranslation();
   const { count } = useRootSelector(selectAppSlice);
@@ -11,17 +12,24 @@ export default function index() {
     dispatch(setCount(value));
   };
   return (
-    <>
-      <Button type="primary" onClick={() => dispatch(decremented())}>
-        -
-      </Button>
-      <Input className="border-2" type="text" onChange={(e) => inputHandle(e)} value={count} />
-      <Button type="primary" onClick={() => dispatch(incremented())}>
-        +
-      </Button>
+    <div className="flex-center h-full">
+      <div className="flex">
+        <Button type="primary" onClick={() => dispatch(decremented())}>
+          -
+        </Button>
+        <div className="w-200px">
+          <Input className="border-2" type="text" onChange={(e) => inputHandle(e)} value={count} />
+        </div>
+
+        <Button type="primary" onClick={() => dispatch(incremented())}>
+          +
+        </Button>
+      </div>
       <Button type="primary" onClick={() => dispatch(getUserData())}>
         {t('hello')}
       </Button>
-    </>
+
+      <IconAccountBox></IconAccountBox>
+    </div>
   );
 }

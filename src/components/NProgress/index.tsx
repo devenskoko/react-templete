@@ -1,7 +1,6 @@
 import 'nprogress/nprogress.css';
 
 import nprogress from 'nprogress';
-import { Fragment } from 'react';
 
 const NProgress: React.FC = () => {
   useEffect(() => {
@@ -10,7 +9,7 @@ const NProgress: React.FC = () => {
       nprogress.done();
     };
   }, []);
-  return <Fragment />;
+  return <></>;
 };
 
 export default NProgress;

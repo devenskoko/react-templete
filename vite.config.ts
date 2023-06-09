@@ -6,6 +6,7 @@ import unocss from 'unocss/vite';
 import Icons from 'unplugin-icons/vite';
 import IconsResolver from 'unplugin-icons/resolver';
 import AutoImport from 'unplugin-auto-import/vite';
+import viteCompression from 'vite-plugin-compression';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -33,10 +34,36 @@ export default defineConfig({
         }),
       ],
     }),
+    viteCompression({
+      verbose: true,
+      disable: false,
+      threshold: 10240,
+      algorithm: 'gzip',
+      ext: '.gz',
+    }),
   ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'), // src 路径
+    },
+  },
+  build: {
+    reportCompressedSize: false,
+    // 消除打包大小超过500kb警告
+    chunkSizeWarningLimit: 2000,
+    // 静态资源打包到dist下的不同目录
+    rollupOptions: {
+      output: {
+        chunkFileNames: 'static/js/[name]-[hash].js',
+        entryFileNames: 'static/js/[name]-[hash].js',
+        assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
+      },
+    },
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
     },
   },
   css: {

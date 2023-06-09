@@ -12,7 +12,7 @@ export default function index() {
   return (
     <>
       <button onClick={() => dispatch(decremented())}>-</button>
-      <input type="text" onChange={(e) => inputHandle(e)} value={count} />
+      <input className="border-2" type="text" onChange={(e) => inputHandle(e)} value={count} />
       <button onClick={() => dispatch(incremented())}>+</button>
       <button onClick={() => dispatch(getUserData())}>{t('hello')}</button>
     </>

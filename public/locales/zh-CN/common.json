@@ -1,3 +1,9 @@
 {
-  "hello": "你好"
+  "hello": "你好",
+  "home": "主页",
+  "welcome to": "欢迎来到",
+  "includes features": "是一个开箱即用的 React 模板，它拥有这些功能：",
+  "change lang": "切换国际化语言",
+  "to redux": "跳转到redux",
+  "github": "github"
 }

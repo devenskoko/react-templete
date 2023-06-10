@@ -1,12 +1,15 @@
-import { useRoutes } from 'react-router-dom';
 import './App.scss';
-import routers from './routes/routerConfig';
 import { Suspense } from 'react';
 import NProgress from './components/NProgress';
-
+import Footer from '@/components/Footer';
+import authRouters from './router/AuthRouters';
 function App() {
-  const elements = useRoutes(routers);
-  return <Suspense fallback={<NProgress />}>{elements}</Suspense>;
+  return (
+    <div className="h-full flex flex-col-center">
+      <Suspense fallback={<NProgress />}>{authRouters()}</Suspense>
+      <Footer></Footer>
+    </div>
+  );
 }
 
 export default App;

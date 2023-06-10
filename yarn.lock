@@ -2985,7 +2985,7 @@
     "@unocss/core" "0.53.1"
     "@unocss/preset-mini" "0.53.1"
 
-"@unocss/reset@0.53.1":
+"@unocss/reset@0.53.1", "@unocss/reset@^0.53.1":
   version "0.53.1"
   resolved "https://registry.yarnpkg.com/@unocss/reset/-/reset-0.53.1.tgz#01026e3682c194dda0efb4991a671a3b4e288d31"
   integrity sha512-rkb6mB0JESRFxZXSknZ3TWQ92TmZwpJyF2OV+7GPZrtUk1YBzydH6DfLjLPxyD1xEUtsQsacNHFO7NEmd9WO6A==
@@ -9519,6 +9519,11 @@ react-refresh@^0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.11.0.tgz#77198b944733f0f1f1a90e791de4541f9f074046"
   integrity sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==
+
+react-router-auth-plus@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/react-router-auth-plus/-/react-router-auth-plus-1.3.2.tgz#d66966b248cc9efde1b689f8e67cedd9837f4518"
+  integrity sha512-wp4i1dw2kgarY5WofUv7+XypiojcdVznmpFqpKANiYS6jDbQF/k6oJoM8NCTY2L8xdL1HWjFq/v0Kq9oeQFwPA==
 
 react-router-dom@^6.12.0:
   version "6.12.1"

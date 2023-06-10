@@ -1,8 +1,6 @@
-import 'nprogress/nprogress.css';
-
 import nprogress from 'nprogress';
 
-const NProgress: React.FC = () => {
+const NProgress = () => {
   useEffect(() => {
     nprogress.start();
     return () => {

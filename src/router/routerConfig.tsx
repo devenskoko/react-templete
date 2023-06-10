@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import { MetaMenu, AuthRouteObject } from './interface';
+import { AuthRouteObject } from 'react-router-auth-plus';
 
 // 快速导入工具函数
 const lazyLoad = (moduleName: string) => lazy(() => import(`@/pages/${moduleName}/index.tsx`));
@@ -9,7 +9,7 @@ const ReduxToolkit = lazyLoad('ReduxToolkit');
 const ReactQuery = lazyLoad('ReactQuery');
 const ErrorPage = lazyLoad('ErrorPage');
 
-const routers: AuthRouteObject<MetaMenu>[] = [
+const routers: AuthRouteObject[] = [
   {
     path: '/',
     element: <Home />,

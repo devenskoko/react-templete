@@ -12,7 +12,7 @@ export default function index() {
     dispatch(setCount(value));
   };
   return (
-    <div className="flex-center h-full">
+    <div className="flex-center mb-20">
       <div className="flex">
         <Button type="primary" onClick={() => dispatch(decremented())}>
           -

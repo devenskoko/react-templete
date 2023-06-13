@@ -8,7 +8,7 @@ export enum Language {
   en = 'en-US',
   zh = 'zh-CN',
   tw = 'zh-TW',
-  jp = 'zh-JP',
+  jp = 'ja-JP',
   tk = 'tr-TK',
 }
 

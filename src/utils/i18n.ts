@@ -3,7 +3,7 @@ import { initReactI18next } from 'react-i18next';
 import Backend from 'i18next-http-backend';
 import { Language } from './enum';
 export const LANG_CACHE_KEY = 'NFT_LANG_KEY';
-export const supportedLngs = ['zh-CN', 'en-US'];
+export const supportedLngs = ['zh-CN', 'en-US', 'ja-JP', 'tr-TK', 'zh-TW'];
 
 export const getInitLang = () => {
   const langCache = localStorage.getItem(LANG_CACHE_KEY);

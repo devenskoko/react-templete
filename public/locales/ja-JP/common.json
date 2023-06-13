@@ -1,0 +1,12 @@
+{
+  "Connect Wallet": "ウォレットを接続する",
+  "change lang": "言語を切り替える",
+  "github": "ギットハブ",
+  "hello": "こんにちは",
+  "home": "家",
+  "includes features": "は構成ゼロの React テンプレートであり、次の機能が含まれています。",
+  "to redux": "冗長化するには",
+  "welcome to": "へようこそ",
+  "useWallet": "ウォレットを接続して始めましょう",
+  "welcomeText": "NTFへようこそ"
+}

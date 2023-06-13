@@ -5,5 +5,8 @@
   "includes features": "是一个开箱即用的 React 模板，它拥有这些功能：",
   "change lang": "切换国际化语言",
   "to redux": "跳转到redux",
-  "github": "github"
+  "github": "github",
+  "Connect Wallet": "连接钱包",
+  "welcomeText": "欢迎来到 NTF",
+  "useWallet": "连接你的钱包，开始使用"
 }

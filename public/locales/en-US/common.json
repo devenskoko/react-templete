@@ -5,5 +5,8 @@
   "includes features": "is a zero-config React template, it includes these feature：",
   "change lang": "Switch languages",
   "to redux": "To redux",
-  "github": "Github"
+  "github": "Github",
+  "Connect Wallet": "Connect Wallet",
+  "welcomeText": "Welcome to NTF",
+  "useWallet": "Connect your wallet and get started"
 }

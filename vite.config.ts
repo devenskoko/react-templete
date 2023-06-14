@@ -30,7 +30,7 @@ export default defineConfig({
       resolvers: [
         IconsResolver({
           componentPrefix: 'Icon',
-          enabledCollections: ['mdi'],
+          // enabledCollections: ['mdi'],
         }),
       ],
     }),

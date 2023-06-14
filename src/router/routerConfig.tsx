@@ -8,6 +8,9 @@ const Home = lazyLoad('Home');
 const ReduxToolkit = lazyLoad('ReduxToolkit');
 const ReactQuery = lazyLoad('ReactQuery');
 const ErrorPage = lazyLoad('ErrorPage');
+const NetworkSwitcher = lazyLoad('NetworkSwitcher');
+const SignMessage = lazyLoad('SignMessage');
+const ReadContracts = lazyLoad('ReadContracts');
 
 const routers: AuthRouteObject[] = [
   {
@@ -27,6 +30,27 @@ const routers: AuthRouteObject[] = [
   {
     path: '/query',
     element: <ReactQuery />,
+    meta: {
+      title: '',
+    },
+  },
+  {
+    path: '/wagmi',
+    element: <NetworkSwitcher />,
+    meta: {
+      title: '',
+    },
+  },
+  {
+    path: '/signMessage',
+    element: <SignMessage />,
+    meta: {
+      title: '',
+    },
+  },
+  {
+    path: '/readContracts',
+    element: <ReadContracts />,
     meta: {
       title: '',
     },

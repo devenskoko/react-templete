@@ -2,7 +2,7 @@ import './App.scss';
 import { Suspense } from 'react';
 import NProgress from './components/NProgress';
 import Footer from '@/components/Footer';
-import authRouters from './router/AuthRouters';
+import authRouters from './router/authRouters';
 function App() {
   return (
     <div className="h-full flex flex-col-center">

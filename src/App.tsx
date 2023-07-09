@@ -1,18 +1,15 @@
+import './App.scss';
 import { Suspense } from 'react';
 import NProgress from './components/NProgress';
 import Footer from '@/components/Footer';
-import authRouters from './router/authRouters';
-import Header from '@/components/Header';
-import Web3Provider from '@/components/WalletConnect';
+import { useRoutes } from 'react-router-dom';
+import routers from './router/routerMap';
 function App() {
   return (
-    <Web3Provider>
-      <div className="h-full flex flex-col-center">
-        <Header></Header>
-        <Suspense fallback={<NProgress />}>{authRouters()}</Suspense>
-        <Footer></Footer>
-      </div>
-    </Web3Provider>
+    <div className="h-full flex flex-col-center">
+      <Suspense fallback={<NProgress />}>{useRoutes(routers)}</Suspense>
+      <Footer></Footer>
+    </div>
   );
 }
 

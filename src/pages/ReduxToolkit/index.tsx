@@ -1,7 +1,6 @@
 import { useRootDispatch, useRootSelector } from '@/store/hooks';
 import { decremented, getUserData, incremented, selectAppSlice, setCount } from '@/store/slices/appSlice';
 import { Button, Input } from 'antd';
-import IconAccountBox from '~icons/mdi/account-box';
 
 export default function index() {
   const { t } = useTranslation();
@@ -28,8 +27,6 @@ export default function index() {
       <Button type="primary" onClick={() => dispatch(getUserData())}>
         {t('hello')}
       </Button>
-
-      <IconAccountBox></IconAccountBox>
     </div>
   );
 }
